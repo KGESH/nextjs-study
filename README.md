@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 연준이 채팅 앱
+*****
 
-## Getting Started
+## Description
 
-First, run the development server:
+- 채팅방 (슬랙 채널)
+  - 공개방
+  - 방장이 초대해서 들어갈 수 있는 비밀방
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- 채팅방 안에서 파일 공유 기능
+  - 모든파일은 Cloud에 저장
+  - 해당 파일의 URL을 공유
+  - 프론트단에서 용량 제한
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 로그인
+  - ID / PW
+- 회원 가입
+  - ID
+  - PW
+  - 권한
+  - 이름
+  - 전화번호
+  
+- 게임
+  - 해당 HTML URL만 클라에 붙이는거임
+  - 클라이언트 (HTML)에서 작동함.
+  - 게임 결과가 나오면 그 결과만 서버에 전송해서 DB에 저장
+  
+- 실시간 접속자 확인 가능
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Stack
+- Frontend
+  - React / Next JS <-- SSR을 지원하는 React 프레임워크임 
+- Backend
+  - Typescript 기반 Node
+  - NodeJS / Nest JS  <-- TypeScript, java의 Spring 같은 존재
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- REST API
+- DB
+  - PostgreSQL / MySQL (RDBMS)
+  - MongoDB (NoSQL)
